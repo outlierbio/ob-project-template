@@ -1,11 +1,18 @@
-FROM jupyter/notebook
+FROM jupyter/r-notebook
 MAINTAINER Jake Feala <jake@outlierbio.com>
 
-# Install R and the R kernel for Jupyter notebooks
-RUN sudo apt-get update &&
-    sudo apt-get install r-base
-RUN Rscript -e "update.packages()" \
-            -e "install.packages(c('rzmq','repr','IRkernel','IRdisplay'), repos = c('http://irkernel.github.io/', getOption('repos')))" \
-            -e "IRkernel::installspec()"
+#######################
+# Install common dependencies for Bioconductor and other R packages
+USER root
+RUN apt-get update && apt-get install -y \
+	libicu-dev \
+	libpcre3-dev \
+	xorg-dev
 
+USER $NB_USER
+RUN conda install -c r r-xml
+
+
+##########################
 # Install additional dependencies here
+RUN Rscript -e 'install.packages("pheatmap", repo="http://cran.us.r-project.org")'
