@@ -1,4 +1,13 @@
-# Start Jupyter notebook container
-IMAGE_NAME=outlierbio/$(basename $(pwd))
-docker build -t $IMAGE_NAME .
-docker run --rm -p 8888:8888 -v "$(pwd):/home/jovyan/work" $IMAGE_NAME
+image={{ cookiecutter.project }}
+platform={{ cookiecutter.platform }}
+
+if [ $platform = "jupyter" ]; then
+	port=8888
+	home_dir=/home/jovyan/work
+else
+	port=8787
+	home_dir=/home/rstudio
+fi
+
+docker build -t $image .
+docker run --rm -p 80:$port -v "$(pwd):$home_dir" $image
