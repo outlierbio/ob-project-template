@@ -1,0 +1,9 @@
+FROM bioconductor/release_core2
+MAINTAINER {{ cookiecutter.author }} <{{ cookiecutter.email }}>
+
+ADD install_bioc.r /src/
+RUN Rscript /src/install_bioc.r
+
+ADD install_packages.r /src/
+RUN Rscript /src/install_packages.r
+

@@ -1,0 +1,4 @@
+FROM rocker/rstudio
+
+ADD install_packages.r /src/
+RUN Rscript /src/install_packages.r
