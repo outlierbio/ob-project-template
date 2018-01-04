@@ -1,5 +1,5 @@
-image={{ cookiecutter.project }}
-platform={{ cookiecutter.platform }}
+image={{ cookiecutter.project_slug }}
+platform={{ cookiecutter.platform_slug }}
 
 if [ $platform = "jupyter" ]; then
 	port=8888
