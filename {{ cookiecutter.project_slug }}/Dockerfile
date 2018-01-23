@@ -24,13 +24,8 @@ RUN apt-get update -y && apt-get install -y \
 	xorg-dev
 
 {% if cookiecutter.platform_slug == 'jupyter' %}
-USER root
-
 USER $NB_USER
 RUN conda install -c r r-xml
-{% elif cookiecutter.platform_slug == 'bioconductor' %}
-ADD install_bioc.r /src/
-RUN Rscript /src/install_bioc.r
 {% endif %}
 
 # Custom R packages
