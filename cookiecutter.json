@@ -2,10 +2,10 @@
     "full_name": "Your Name",
     "email": "your@email.com",
     "github_username": "<username>",
-    "project": "Outlier Bio project",
-    "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
-    "platform": ["RStudio", "Jupyter", "Bioconductor"],
-    "version": "0.1.0",
+    "project": "Project full name (not the short slug)",
     "project_slug": "{{ cookiecutter.project.lower().replace(' ', '-') }}",
-    "platform_slug": "{{ cookiecutter.platform.lower() }}"
+    "project_short_description": "A one-sentence description of the project",
+    "platform": ["RStudio", "Jupyter", "Bioconductor"],
+    "platform_slug": "{{ cookiecutter.platform.lower() }}",
+    "version": "0.1.0"
 }
