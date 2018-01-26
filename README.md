@@ -4,7 +4,8 @@ This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/index.htm
 
 - **standard folder system** with `README.md` descriptions within each folder
 - **Luigi build pipeline**, `build.py`, for downloads and batch preprocessing
-- **Dockerized notebook server** for either Jupyter, RStudio, or RStudio with [Bioconductor](http://www.bioconductor.org/) packages pre-installed. - **computational notebook** to run your analysis, either `notebook.ipynb` (if you use Jupyter) or `notebook.Rmd` (if you prefer RMarkdown).
+- **Dockerized notebook server** for either Jupyter, RStudio, or RStudio with [Bioconductor](http://www.bioconductor.org/) packages pre-installed. 
+- **computational notebook** to run your analysis, either `notebook.ipynb` (if you use Jupyter) or `notebook.Rmd` (if you prefer RMarkdown).
 
 Docker allows you to completely specify your enviroment so your analysis is fully reproducible. Just make sure to add all dependencies (e.g., apt-get for system packages, conda for Python, CRAN or Bioconductor for R) to the Dockerfile and, if applicable, the `install_packages.r` script used by the Dockerfile.
 

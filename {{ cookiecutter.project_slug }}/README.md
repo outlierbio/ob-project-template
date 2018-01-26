@@ -2,7 +2,7 @@
 
 {{ cookiecutter.project_short_description }}
 
-## Get started
+## Getting started
 First, [install the Docker client](http://docs.docker.com) for your system.
 
 Then, in a terminal, change to the project directory (the one containing this file) and:
@@ -19,3 +19,6 @@ Now your notebook server is running! Open a browser and point to `http://localho
 - Open `notebook.Rmd`{% endif %}
 - If you're accessing a finished notebook, you can browse, edit the code, and execute the cells to reproduce or alter the figures.
 - If you're starting a new notebook, read the project guidelines in the notebook and start coding!
+
+---
+created with [cookiecutter](http://cookiecutter.readthedocs.io/en/latest/), using the [Outlier Bio project template](https://github.com/outlierbio/ob-project-template)
