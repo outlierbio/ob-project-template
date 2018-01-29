@@ -1,4 +1,6 @@
 .git
-raw
 data
 notebooks
+raw
+ref
+results

@@ -21,4 +21,4 @@ Now your notebook server is running! Open a browser and point to `http://localho
 - If you're starting a new notebook, read the project guidelines in the notebook and start coding!
 
 ---
-created with [cookiecutter](http://cookiecutter.readthedocs.io/en/latest/), using the [Outlier Bio project template](https://github.com/outlierbio/ob-project-template)
+*created with [cookiecutter](http://cookiecutter.readthedocs.io/en/latest/), using the [Outlier Bio project template](https://github.com/outlierbio/ob-project-template)*
